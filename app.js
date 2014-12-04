@@ -30,7 +30,7 @@ app.directive('quiz', function(quizFactory) {
 				}
 			};
 
-			scope.checkQuestion = function() {
+			scope.checkAnswer = function() {
 				if(!$('input[name=answer]:checked').length) return;
 
 				var ans = $('input[name=answer]:checked').val();
