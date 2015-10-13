@@ -44,7 +44,22 @@ app.directive('quiz', function(quizFactory) {
 
 				scope.answerMode = false;
 			};
+			
+			scope.checkQuestion = function() {
+				if(!$('input[name=answer]:checked').length) return;
 
+				var ans = $('input[name=answer]:checked').val();
+
+				if(ans == scope.options[scope.answer]) {
+					scope.score++;
+					scope.correctAns = true;
+				} else {
+					scope.correctAns = false;
+				}
+
+				scope.answerMode = false;
+			};
+			
 			scope.nextQuestion = function() {
 				scope.id++;
 				scope.getQuestion();
