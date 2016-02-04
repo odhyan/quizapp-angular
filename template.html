@@ -20,11 +20,12 @@
 
 	<div ng-show="quizOver">
 		<h2>Quiz is over</h2>
+		<p><a href="http://twitter.com/home?status=I%20just%20took%20this%20cool%20quiz%20and%20got%20{{score}}%20out%20of%20{{options.length+1}}%20answers%20correct!%20Try%20and%20beat%20me%20here:%20http://www.robertdevore.com" target="_blank">Tweet this</a></p>
 		<button ng-click="reset()">Play again</button>
 	</div>
 
 	<div id="score">
-		Score: {{score}}
+		Score: {{score}} of {{options.length+1}}
 	</div>
 </div>
 
